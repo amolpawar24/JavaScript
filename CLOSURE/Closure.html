@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // javascript closure example
+
+        // outer function
+        function greet() {
+
+        // variable defined outside the inner function
+        let name = 'John';
+
+        // inner function
+            function displayName() {
+
+                // accessing name variable
+                return 'Hi' + ' ' + name;
+            
+            }
+
+            return displayName;
+        }
+        const g1 = greet();
+        console.log(g1); // returns the function definition
+        console.log(g1()); // returns the value
+
+    </script>
+</body>
+</html>
