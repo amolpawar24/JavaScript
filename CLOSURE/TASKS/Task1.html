@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Bank(AccNo,AccountHolderName,Amount){
+
+            let _AccNo=AccNo;
+            let _AccountHolderName=AccountHolderName;
+            let _Amount=Amount;
+
+            function AccountDetails(){
+                console.log(`Account Number : ${_AccNo}`);
+                console.log(`Account Holder Name : ${_AccountHolderName}`);
+                console.log(`Account Amount : ${_Amount}`);
+            }
+            
+            function Deposite(money){
+                _Amount+=money;
+                AccountDetails();
+            }
+            function Withdraw(money){
+                if(money <= _Amount)
+                {
+                    _Amount-=money;
+                    AccountDetails();
+                }
+                else{
+                    console.log("insufficient Bank Balance")
+                }
+            }
+            return{
+                Deposite:Deposite,
+                Withdraw:Withdraw
+            }
+        }
+
+        let Atm =  Bank(47441,"Amol Pawar",5000);
+
+        Atm.Deposite(500);
+        Atm.Withdraw(400);
+        Bank(47441,"Amol Pawar",2000).Deposite(400);
+
+    </script>
+</body>
+</html>
