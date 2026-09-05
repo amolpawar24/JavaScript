@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var Problems</title>
+</head>
+<body>
+    <!--! VAR  -->
+    <!--* Var is not recommended to use  -->
+    <!--* It overrides variables with the same name in the same scope -->
+    <!--? It leads the ambiguity  -->
+    <script>
+        var x = 5;
+        var x = 10; // This will override the previous value of x
+        console.log(x); // Output: 10
+    </script>
+
+    <!--? Scope issues  -->
+    <script>
+        var y = 20;
+        if (true) {
+            var y = 30; // This will override the previous value of y
+            console.log(y); // Output: 30
+        }
+        console.log(y); // Output: 30
+    </script>
+</body>
+</html>
