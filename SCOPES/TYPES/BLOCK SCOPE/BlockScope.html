@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--! BLOCK SCOPE  -->
+    <script>
+        {
+            var varName = "Amol";
+            let letName = "Ganesh";
+            const constName = "Onkar"
+            console.log("Inside the Block :", varName);
+            console.log("Inside the Block :", letName);
+            console.log("Inside the Block :", constName);
+            
+        }
+        console.log("Outside the Block : ", varName);
+        // console.log("Outside the Block : ", letName); //Error
+        // console.log("Outside the Block : ", constName); //Error
+
+        
+    </script>
+</body>
+</html>
