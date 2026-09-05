@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript const</title>
+  </head>
+
+  <body>
+    <!--! const -->
+
+    <!--! 1. Declaration - Not Possible -->
+    <!--* const must be initialized during declaration. -->
+    <script>
+      // const username;
+      // Error: Missing initializer in const declaration
+    </script>
+
+    <!--? 2. Declaration + Initialization - Possible -->
+    <!--* const must be declared with a value. -->
+    <script>
+      const age = 25;
+
+      console.log(age);
+      // Output: 25
+    </script>
+
+    <!--! 3. Re-Declaration - Not Possible -->
+    <!--* const does not allow the same variable again. -->
+    <script>
+      const city = "Pune";
+
+      // const city = "Mumbai";
+      // Error: Identifier 'city' has already been declared
+    </script>
+
+    <!--! 4. Re-Assignment - Not Possible -->
+    <!--* const does not allow changing the value. -->
+    <script>
+      const salary = 25000;
+
+      // salary = 40000;
+      // Error: Assignment to constant variable.
+    </script>
+
+    <!--! 5. Hoisting - Not Accessible Before Declaration -->
+    <!--* const is hoisted but remains in the Temporal Dead Zone. -->
+    <script>
+      // console.log(Hoisting);
+      // Error: Cannot access 'Hoisting' before initialization
+
+      const Hoisting = "Hoisting";
+
+      console.log(Hoisting);
+      // Output: Amol
+    </script>
+
+    <!--? 6. Block Scope - Possible -->
+    <!--* const is accessible only inside its block. -->
+    <script>
+      if (true) {
+        const message = "Hello JavaScript";
+
+        console.log(message);
+        // Output: Hello JavaScript
+      }
+
+      // console.log(message);
+      // Error: message is not defined
+    </script>
+
+    <!--? 7. Block Scope with for Loop - Possible -->
+    <!--* const remains inside the block. -->
+    <script>
+      for (let i = 1; i <= 3; i++) {
+        const number = i;
+
+        console.log(number);
+        // Output: 1 2 3
+      }
+
+      // console.log(number);
+      // Error: number is not defined
+    </script>
+
+    <!--? TIP -->
+    <!--* const = Block Scope + TDZ + No Re-Declaration + No Re-Assignment -->
+  </body>
+</html>
