@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript var</title>
+  </head>
+
+  <body>
+    <!--! var -->
+
+    <!--? 1. Declaration - Possible -->
+    <!--* Variable can be declared without a value. -->
+    <script>
+      var username;
+
+      console.log("The value of :"+username);
+      // Output: undefined
+      console.log(typeof username);
+      
+    </script>
+
+    <!--? 2. Declaration + Initialization - Possible -->
+    <!--* Variable can be declared with a value. -->
+    <script>
+      var age = 25;
+
+      console.log(age);
+      // Output: 25
+    </script>
+
+    <!--? 3. Re-Declaration - Possible -->
+    <!--* var allows declaring the same variable again. -->
+    <script>
+      var city = "Pune";
+
+      var city = "Mumbai";
+
+      console.log(city);
+      // Output: Mumbai
+    </script>
+
+    <!--? 4. Re-Assignment - Possible -->
+    <!--* var allows changing the value of a variable. -->
+    <script>
+      var salary = 25000;
+
+      salary = "Thirty Thousands";
+
+      console.log(salary);
+      // Output: Thirty Thousands
+    </script>
+
+    <!--? 5. Hoisting - Possible -->
+    <!--* var is hoisted and initialized with undefined. -->
+    <script>
+      console.log(Hoisting);
+      // Output: undefined
+
+      var Hoisting = "Amol";
+
+      console.log(Hoisting);
+      // Output: Amol
+    </script>
+
+    <!--? 6. Global Scope - Possible -->
+    <!--* var outside a function has global scope. -->
+    <script>
+      var company = "Google";
+
+      function showCompany() {
+        console.log(company);
+        // Output: Google
+      }
+
+      showCompany();
+
+      console.log(company);
+      // Output: Google
+    </script>
+
+    <!--? 7. Function Scope - Possible -->
+    <!--* var inside a function has function scope. -->
+    <script>
+      function employeeDetails() {
+        var employee = "Amol";
+
+        console.log(employee);
+        // Output: Amol
+      }
+
+      employeeDetails();
+
+      // console.log(employee);
+      // Error: employee is not defined
+    </script>
+
+    <!--? 8. Block Scope - Not Possible -->
+    <!--* var does not have block scope. -->
+    <script>
+      if (true) {
+        var message = "Hello JavaScript";
+      }
+
+      console.log(message);
+      // Output: Hello JavaScript
+    </script>
+
+    <!--? TIP -->
+    <!--* var = Function Scope + Hoisting + Re-Declaration + Re-Assignment -->
+  </body>
+</html>
