@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--? 1.First Script  -->
+    <script>
+      function myFunction() {
+        document.getElementById("Head").innerHTML = "Paragraph Changed";
+      }
+    </script>
+    <!--? 2.Second Script  -->
+    <script>
+        let d = new Date();
+        document.write("Today's date is : " + d)
+    </script>
+  </head>
+  <body>
+    <h2>Javascript In Head</h2>
+    <p id="Head"></p>
+    <button type="button" onclick="myFunction()">Try It</button>
+  </body>
+</html>
