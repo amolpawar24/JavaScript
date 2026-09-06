@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello This is default Text</p>
+    <button id="btn1">Show Alert</button>
+    <button id="btn2">Change Color</button>
+    <button id="btn3">Change Text</button>
+
+    <script>
+        const btn1 = document.getElementById("btn1");
+        const btn2 = document.getElementById("btn2");
+        const btn3 = document.getElementById("btn3");
+
+        //* Show Alert
+        btn1.addEventListener("click", function(){
+            alert("Hello this is Alert Message");
+        }) 
+
+        // * Change Color
+        btn2.addEventListener("click", function(){
+            document.body.style.backgroundColor = "red";
+        })
+
+        // * Change Text
+        btn3.addEventListener("click", function(){
+            document.querySelector("p").textContent = "Hello This is Changed Text";
+        })
+    </script>
+</body>
+</html>
