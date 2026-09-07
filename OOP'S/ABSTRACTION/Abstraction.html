@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class BankAccount{
+            constructor(AccNo,AccountHolderName,Balance){
+                this._accountNumber=AccNo;
+                this._accountHolderName=AccountHolderName;
+                this._balance=Balance;
+            }
+
+            showAccountDetails(){
+                console.log(`Account Number: ${this._accountNumber}`);
+                console.log(`Account Holder Name: ${this._accountHolderName}`);
+                console.log(`Balance: ${this._balance}`);
+            }
+            deposite(money){
+                this._balance+=money;
+                this.showAccountDetails();
+            }
+            withdraw(money){
+                if(money<=this._balance){
+                    this._balance-=money;
+                    this.showAccountDetails();
+                }else{
+                    console.log("Insufficient Balance");
+                }
+            }
+        }
+
+        let atm = new BankAccount(12345,"Amol Pawar",5000)
+        atm.deposite(500);
+        atm.withdraw(5000);
+
+    </script>
+</body>
+</html>
