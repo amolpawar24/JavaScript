@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--! Nullish Coalescing Operator  -->
+    <!--* The nullish coalescing operator (??) returns its right-hand operand if its value is null or undefined. Otherwise, it returns the left-hand operand. -->
+    <!--? Notes: -->
+    <!--? The nullish coalescing operator is available in JavaScript since ECMAScript 2020. -->
+    <!--? The nullish coalescing operator can be used with any data type, including objects, arrays, and functions. -->
+    <!--? The nullish coalescing operator can be used in a concise and readable way to handle nullable values. -->
+    <!--? The nullish coalescing operator can be used with the logical OR (||) operator to handle nullable values as well. -->
+    <!--? The nullish coalescing operator can be used with the logical AND (&&) operator to handle nullable values as well. -->
+    <!--? The nullish coalescing operator can be used with the ternary operator (?:) to handle nullable values as well. -->
+    <!--? The nullish coalescing operator can be used with the optional chaining operator (?.) to handle nullable values as well. -->
+
+    <script>
+        const foo = null ?? 'default string';
+        console.log(foo);
+    </script>
+
+    <script>
+        let a = null ?? undefined
+        console.log(a);
+    </script>
+
+    <script>
+        let b = undefined ?? null
+        console.log(b);
+    </script>
+
+    <script>
+        let c = 5 ?? 10
+        console.log(c);
+    </script>
+</body>
+</html>
