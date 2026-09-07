@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // javascript strict mode example
+
+        // strict mode is a way to opt in to a restricted variant of JavaScript
+        // it helps in catching common coding errors and "unsafe" actions
+
+        'use strict';
+
+        // Example of strict mode
+        function myFunction() {
+            // In strict mode, assigning a value to an undeclared variable will throw an error
+            x = 3.14; // This will cause an error in strict mode
+        }
+
+        try {
+            myFunction();
+        } catch (e) {
+            console.error(e); // ReferenceError: x is not defined
+        }
+    </script>
+</body>
+</html>
