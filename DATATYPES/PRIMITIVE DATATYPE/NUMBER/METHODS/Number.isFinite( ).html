@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--! Number.isFinite()  -->
+    <!--* The Number.isFinite() method returns true if a number is a finite number. -->
+    <!--* Infinite (not finite) numbers are Infinity, -Infinity, or NaN -->
+    <!--* Otherwise it returns false. -->
+    <script>
+        let num1 = 123;
+        console.log(Number.isFinite(num1))//true
+        console.log(Number.isFinite(5-5));//true
+        console.log(Number.isFinite("123"));//false
+        console.log(Number.isFinite(undefined));//false
+        console.log(Number.isFinite(true));;//false
+    </script>
+</body>
+</html>
