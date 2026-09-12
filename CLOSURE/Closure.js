@@ -1,5 +1,5 @@
 function Outer() {
-    // Outer Funcion
+  // Outer Funcion
   let a = 10;
 
   function Inner() {
@@ -12,6 +12,6 @@ function Outer() {
 
 let res = Outer();
 
-    res();
-    res();
-    res();
+res();
+res();
+res();
