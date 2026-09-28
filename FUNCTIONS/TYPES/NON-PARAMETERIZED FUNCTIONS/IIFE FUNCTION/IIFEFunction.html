@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!--! 5.IIFE Function  -->
+    <!--* Immediate Invoking Function  -->
+    <!--* We cannot call This Function More Than One Time  -->
+    <!--* We can call this Function out of Parenthesis Also but first function run only -->
+    <!--* We can declare mora than one function inside the Parenthesis  -->
+    <!--todo : This function declared inside the () parenthesis and call it also in the Same Block  -->
+    <!--? syntax : (function()                                      -->
+    <!--?        {                                                   -->
+    <!--?            //Set Of Instructions                           -->
+    <!--?                                                           -->
+    <!--?                                                           -->
+    <!--?         }())                                  -->     
+    
+    <script>
+        (function () {
+            console.log("IIFE Function One");
+        },
+        function () {
+            console.log("IIFE Function Two");
+        },
+        function () {
+            console.log("IIFE Function Three");
+        }())
+        // ();
+    </script>
+
+
+</body>
+</html>
