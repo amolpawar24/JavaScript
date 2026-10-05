@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!--! QuerySelectorAll()  -->
+    <!--* It will target Only One Element at a time.  -->
+    <!--? It target the first element that matches the selector. -->
+
+    <div class="Para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+        consectetur ducimus earum facilis iure quisquam rerum, dolor unde eum nemo
+        qui, ipsam, repellendus necessitatibus.
+      </div>
+      <div class="Para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+        consectetur ducimus earum facilis iure quisquam rerum, dolor unde eum nemo
+        qui, ipsam, repellendus necessitatibus.
+      </div>
+      <div class="Para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+        consectetur ducimus earum facilis iure quisquam rerum, dolor unde eum nemo
+        qui, ipsam, repellendus necessitatibus.
+      </div>
+      <div class="Para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+        consectetur ducimus earum facilis iure quisquam rerum, dolor unde eum nemo
+        qui, ipsam, repellendus necessitatibus.
+      </div>
+  
+      <h1 id="Demo">
+          This is Heading One
+      </h1>
+  
+      <i>This Is Italic 1</i>
+      <i>This Is Italic 1</i>
+  
+      <!--? EXample 1  -->
+    <script>
+         let ele = document.querySelectorAll(".Para");
+         ele.forEach(element => {
+            element.style.backgroundColor="yellow"
+         });
+    </script>
+
+    <!--? Example 2  -->
+    <script>
+         let ele1 = document.querySelector("#Demo");
+         ele1.style.backgroundColor="red"
+    </script>
+
+    <!--? Example 3  -->
+    <script>
+         let ele2 = document.querySelectorAll("i");
+         ele2.forEach(element => {
+            element.style.color="blue"
+         });
+    </script>
+</body>
+</html>
