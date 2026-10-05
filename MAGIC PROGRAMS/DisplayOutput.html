@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo1"></h1>
+    <h2 id="demo2"></h2>
+    <h3 id="demo3"></h3>
+    <!--! Different ways to Display Output  -->
+
+    <!--! 1.Using console  -->
+    <script>
+        console.log("This is Form Console");
+    </script>
+
+    <!--! 2.Using document.write()  -->
+    <script>
+        document.write("This is From Document.write()+<br>")
+    </script>
+
+    <!--! 3.Using document.writeln()  -->
+    <script>
+        document.writeln("This is From Document.writeln()")
+    </script>
+
+    <!--! 4.Using innerHTML  -->
+    <script>
+        document.getElementById("demo1").innerHTML="This is from innerHTML"
+    </script>
+
+    <!--! 5.Using innerText  -->
+    <script>
+        document.getElementById("demo2").innerText="This is from innerText"
+    </script>
+
+    <!--! 6.Using textContent  -->
+    <script>
+        document.getElementById("demo3").textContent="This is From textContent"
+    </script>
+</body>
+</html>
