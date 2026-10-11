@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--! FUNCTION CALLING TYPES  -->
+
+    <!--! 1.Using Function Name  -->
+    <script>
+        function function1(){
+            console.log("This Is Function 1");
+        }
+        function1();
+    </script>
+
+    <!--! 2.Function as an Arguments  -->
+    <script>
+        function function2(params) {
+            console.log("This is Function 2");
+        }
+        let demo = function2();
+        demo;
+    </script>
+
+    <!--! 3.Using call() method  -->
+    <script>
+        function function3(){
+            console.log("This is Function 3");
+        }
+        function3.call();
+    </script>
+
+    <!--! 4.Using apply() method  -->
+    <script>
+        function function4(){
+            console.log("This is Function 4")
+        }
+        function4.apply();
+    </script>
+
+    <!--! 5.Using ` `  [Backtick]-->
+    <script>
+        function function5(){
+            console.log("This is Function 5");
+        }
+        function5 ``;
+    </script>
+
+
+</body>
+</html>
