@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const recordVideoOne = new Promise((resolve,reject) =>{
+            //resolve("Video 1 Recorded")
+            reject("Video 1 is Not Recorded");
+        })
+
+        const recordVideoTwo = new Promise((resolve,reject) =>{
+           // resolve("Video 2 Recorded")
+            reject("Video 3 is Not Recorded");
+
+        })
+
+        const recordVideoThree = new Promise((resolve,reject) =>{
+          //  resolve("Video 3 Recorded")
+            reject("Video 3 is Not Recorded");
+
+        })
+
+        Promise.all([
+            recordVideoOne,
+            recordVideoTwo,
+            recordVideoThree
+        ]).then((message) =>{
+            console.log(message)
+        }).catch((error) =>{
+            console.log(error)
+        })
+    </script>
+</body>
+</html>
