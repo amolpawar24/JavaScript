@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--? 5.Scope : Global  -->
+    <script>
+        console.log("Start");
+        //5.Scope
+        var a=10;
+        function start(){
+            //Block Scope
+            console.log(a);
+        }
+        start();
+        console.log(a);
+    </script>
+    <script>
+            console.log("Start");
+        //5.Scope
+        var a=20;
+        function start(){
+            //Block Scope
+            console.log(a);//undefined
+            //Re-Declaration
+            var a=30;
+            console.log(a);
+        }
+        start();
+        console.log(a);
+    </script>
+</body>
+</html>
