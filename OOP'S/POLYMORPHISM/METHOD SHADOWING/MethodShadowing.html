@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "output1"> </p>
+    <p id = "output2"> </p>
+    <script>
+        class Math {
+            mathOperations(a, b) {
+            document.getElementById("output1").innerHTML =  "Addition: " + (a+b) + "<br>";
+            document.getElementById("output1").innerHTML += "Subtraction: " + (a-b);
+            }
+        }
+
+        class AdvanceMath extends Math {
+            mathOperations(a, b) {
+            super.mathOperations(a, b);
+            document.getElementById("output2").innerHTML += "Multiplication: " + (a*b) + "<br>";
+            document.getElementById("output2").innerHTML += "Division: " + (a/b);
+            }
+        }
+
+        const A_math = new AdvanceMath();
+        A_math.mathOperations(10, 5); // Calls method of AdvanceMath class
+    </script>
+</body>
+</html>
