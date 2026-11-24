@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String + Number Concatenation</title>
+</head>
+
+<body>
+
+    <h1>JavaScript String + Number</h1>
+
+    <script>
+
+        //! 1. String + Number
+        //todo:- When a string is combined with a number using +,
+        //todo:- JavaScript performs string concatenation.
+        //todo:- The number is converted into a string.
+
+        let name = "Amol";
+        let age = 25;
+
+        console.log(name + age);
+        // Output: Amol25
+
+
+        //! 2. String + Number with Space
+        //todo:- We can add a space between the string and number.
+
+        let firstName = "Amol";
+        let mobile = 9876543210;
+
+        console.log(firstName + " " + mobile);
+        // Output: Amol 9876543210
+
+
+        //! 3. String + Integer
+        //todo:- An integer is converted into a string during concatenation.
+
+        console.log("Number: " + 100);
+        // Output: Number: 100
+
+        console.log("Age: " + 25);
+        // Output: Age: 25
+
+
+        //! 4. String + Decimal Number
+        //todo:- Decimal numbers are also converted into strings.
+
+        console.log("Price: " + 99.50);
+        // Output: Price: 99.5
+
+        console.log("Percentage: " + 85.75);
+        // Output: Percentage: 85.75
+
+
+        //! 5. String + Negative Number
+        //todo:- Negative numbers can also be concatenated with strings.
+
+        console.log("Temperature: " + -10);
+        // Output: Temperature: -10
+
+        console.log("Balance: " + -500);
+        // Output: Balance: -500
+
+
+        //! 6. String + Zero
+        //todo:- Zero is converted into a string during concatenation.
+
+        console.log("Value: " + 0);
+        // Output: Value: 0
+
+
+        //! 7. String + Multiple Numbers
+        //todo:- Multiple numbers can be concatenated with strings.
+
+        console.log("Numbers: " + 10 + 20 + 30);
+        // Output: Numbers: 102030
+
+        // Step 1: "Numbers: " + 10 = "Numbers: 10"
+        // Step 2: "Numbers: 10" + 20 = "Numbers: 1020"
+        // Step 3: "Numbers: 1020" + 30 = "Numbers: 102030"
+
+
+        //! 8. String + Number Variable
+        //todo:- We can concatenate a string with a number stored in a variable.
+
+        let product = "Laptop";
+        let price = 50000;
+
+        console.log(product + " Price: " + price);
+        // Output: Laptop Price: 50000
+
+
+        //! 9. String + Number Expression
+        //todo:- Arithmetic expressions are evaluated before concatenation
+        //todo:- when they have higher operator precedence.
+
+        let a = 10;
+        let b = 20;
+
+        console.log("Addition: " + (a + b));
+        // Output: Addition: 30
+
+
+        //! 10. String + Number Without Parentheses
+        //todo:- Without parentheses, + is evaluated from left to right.
+        //todo:- Once the result becomes a string, the next + concatenates.
+
+        let x = 10;
+        let y = 20;
+
+        console.log("Addition: " + x + y);
+        // Output: Addition: 1020
+
+        // Step 1: "Addition: " + 10 = "Addition: 10"
+        // Step 2: "Addition: 10" + 20 = "Addition: 1020"
+
+
+        //! 11. String + Number Using +=
+        //todo:- The += operator appends a number to an existing string.
+        //todo:- The original variable is updated.
+
+        let message = "Total: ";
+
+        message += 100;
+
+        console.log(message);
+        // Output: Total: 100
+
+
+        //! 12. String + Number with typeof
+        //todo:- The concatenated result has the string data type.
+
+        let text = "Value: ";
+        let number = 100;
+
+        let result = text + number;
+
+        console.log(result);
+        // Output: Value: 100
+
+        console.log(typeof result);
+        // Output: string
+
+
+        //! 13. String + BigInt
+        //todo:- BigInt can be concatenated with a string.
+        //todo:- The BigInt value is converted into a string.
+
+        let bigNumber = 100n;
+
+        console.log("Big Number: " + bigNumber);
+        // Output: Big Number: 100
+
+
+    </script>
+
+</body>
+
+</html>
