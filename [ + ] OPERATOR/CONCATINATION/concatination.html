@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Addition vs String Concatenation</title>
+</head>
+<body>
+
+    <h1>Number Addition vs String Concatenation</h1>
+
+    <script>
+
+        //! 1. Number + Number
+        //todo:- When both operands are numbers, + performs addition.
+
+        console.log(10 + 20);
+        // Output: 30
+
+
+        //! 2. String + String
+        //todo:- When both operands are strings, + joins them.
+
+        console.log("10" + "20");
+        // Output: "1020"
+
+
+        //! 3. Number + String
+        //todo:- When one operand is a string, + performs concatenation.
+
+        console.log(10 + "20");
+        // Output: "1020"
+
+
+        //! 4. String + Number
+        console.log("10" + 20);
+        // Output: "1020"
+
+
+        //! 5. Number + Number + String
+        //todo:- JavaScript evaluates + from left to right.
+
+        console.log(10 + 20 + "30");
+        // Step 1: 10 + 20 = 30
+        // Step 2: 30 + "30" = "3030"
+        // Output: "3030"
+
+
+        //! 6. String + Number + Number
+        console.log("10" + 20 + 30);
+        // Step 1: "10" + 20 = "1020"
+        // Step 2: "1020" + 30 = "102030"
+        // Output: "102030"
+
+
+        //! 7. Number + String + Number
+        console.log(10 + "20" + 30);
+        // Step 1: 10 + "20" = "1020"
+        // Step 2: "1020" + 30 = "102030"
+        // Output: "102030"
+
+
+        //! 8. Using Parentheses with Number Addition
+        //todo:- Parentheses are evaluated first.
+
+        console.log("10" + (20 + 30));
+        // Step 1: 20 + 30 = 50
+        // Step 2: "10" + 50 = "1050"
+        // Output: "1050"
+
+
+        //! 9. Parentheses Around the First Addition
+        console.log((10 + 20) + "30");
+        // Step 1: 10 + 20 = 30
+        // Step 2: 30 + "30" = "3030"
+        // Output: "3030"
+
+
+        //! 10. Comparing Results
+        let numberResult = 10 + 20;
+        let stringResult = "10" + "20";
+
+        console.log(numberResult);
+        // Output: 30
+
+        console.log(stringResult);
+        // Output: "1020"
+
+
+        //! 11. Checking Data Types
+        console.log(typeof (10 + 20));
+        // Output: "number"
+
+        console.log(typeof ("10" + "20"));
+        // Output: "string"
+
+        console.log(typeof (10 + "20"));
+        // Output: "string"
+
+
+        //! 12. Important Comparison Examples
+
+        console.log(10 + 10 + "0");
+        // Step 1: 10 + 10 = 20
+        // Step 2: 20 + "0" = "200"
+        // Output: "200"
+
+        console.log("10" + 10 + 10);
+        // Step 1: "10" + 10 = "1010"
+        // Step 2: "1010" + 10 = "101010"
+        // Output: "101010"
+
+        console.log(10 + 10 + 10);
+        // Output: 30
+
+        console.log("10" + "10" + "10");
+        // Output: "101010"
+
+    </script>
+
+</body>
+</html>
