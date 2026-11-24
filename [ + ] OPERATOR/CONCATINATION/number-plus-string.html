@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number + String Concatenation</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Number + String</h1>
+
+    <script>
+
+        //! 1. Number + String
+        //todo:- When a number is combined with a string using +,
+        //todo:- JavaScript performs string concatenation.
+        //todo:- The number is converted into a string.
+
+        let number = 10;
+        let text = "20";
+
+        console.log(number + text);
+        // Output: "1020"
+
+
+        //! 2. Number + String with Space
+        //todo:- We can add a space between a number and a string.
+
+        let age = 25;
+        let name = "Amol";
+
+        console.log(age + " " + name);
+        // Output: "25 Amol"
+
+
+        //! 3. Integer + String
+
+        console.log(100 + "Hello");
+        // Output: "100Hello"
+
+        console.log(500 + " Rupees");
+        // Output: "500 Rupees"
+
+
+        //! 4. Decimal Number + String
+
+        console.log(99.50 + " Rupees");
+        // Output: "99.5 Rupees"
+
+        console.log(85.75 + " Percentage");
+        // Output: "85.75 Percentage"
+
+
+        //! 5. Negative Number + String
+
+        console.log(-10 + " Temperature");
+        // Output: "-10 Temperature"
+
+        console.log(-500 + " Balance");
+        // Output: "-500 Balance"
+
+
+        //! 6. Zero + String
+
+        console.log(0 + " Value");
+        // Output: "0 Value"
+
+
+        //! 7. Number Variable + String Variable
+        //todo:- We can concatenate two variables containing different data types.
+
+        let price = 50000;
+        let product = "Laptop";
+
+        console.log(price + " " + product);
+        // Output: "50000 Laptop"
+
+
+        //! 8. Number + Multiple Strings
+        //todo:- Multiple strings can be joined with a number using +.
+
+        console.log(10 + " " + "JavaScript" + " " + "Course");
+        // Output: "10 JavaScript Course"
+
+
+        //! 9. Number + String + Number
+        //todo:- Once the first + operation produces a string,
+        //todo:- the next + operation also performs concatenation.
+
+        console.log(10 + "20" + 30);
+        // Output: "102030"
+
+        // Step 1: 10 + "20" = "1020"
+        // Step 2: "1020" + 30 = "102030"
+
+
+        //! 10. Number + String + String
+        //todo:- The number is converted into a string.
+        //todo:- All subsequent strings are joined together.
+
+        console.log(10 + "20" + "30");
+        // Output: "102030"
+
+        // Step 1: 10 + "20" = "1020"
+        // Step 2: "1020" + "30" = "102030"
+
+
+        //! 11. Number + String with Arithmetic Expression
+        //todo:- Multiplication, division and other higher-precedence
+        //todo:- arithmetic operations are performed before addition.
+
+        let a = 10;
+        let b = 20;
+
+        console.log(a + " " + (a + b));
+        // Output: "10 30"
+
+
+        //! 12. Number + String Without Parentheses
+        //todo:- + operations with the same precedence are evaluated left to right.
+        //todo:- Therefore, concatenation can happen before the final operation.
+
+        let x = 10;
+        let y = 20;
+
+        console.log(x + " " + y);
+        // Output: "10 20"
+
+        console.log(x + " " + y + 30);
+        // Output: "10 2030"
+
+
+        //! 13. Number + String Using +=
+        //todo:- The += operator appends the string to the number variable's
+        //todo:- existing value only if that variable is already a string.
+        //todo:- With a number variable, += performs numeric addition
+        //todo:- if the right-hand value is a number.
+
+        let message = 100;
+
+        message += " Rupees";
+
+        console.log(message);
+        // Output: "100 Rupees"
+
+
+        //! 14. Checking Result Data Type
+        //todo:- The result of number + string concatenation is a string.
+
+        let num = 100;
+        let str = "200";
+
+        let result = num + str;
+
+        console.log(result);
+        // Output: "100200"
+
+        console.log(typeof result);
+        // Output: string
+
+
+        //! 15. Original Variables Remain Unchanged
+        //todo:- Using + creates a new result.
+        //todo:- It does not change the original number or string.
+
+        let value1 = 100;
+        let value2 = "200";
+
+        let finalResult = value1 + value2;
+
+        console.log(value1);
+        // Output: 100
+
+        console.log(value2);
+        // Output: "200"
+
+        console.log(finalResult);
+        // Output: "100200"
+
+
+    </script>
+
+</body>
+
+</html>
