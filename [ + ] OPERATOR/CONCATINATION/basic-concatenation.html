@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic String Concatenation</title>
+</head>
+
+<body>
+
+    <h1>JavaScript String Concatenation</h1>
+
+    <script>
+
+        //! 1. String + String
+        //todo:- Concatenation means joining two or more strings together.
+        //todo:- The + operator is used to join strings.
+        //todo:- It returns a new string.
+
+        let firstName = "Amol";
+        let lastName = "Pawar";
+
+        console.log(firstName + lastName);
+        // Output: AmolPawar
+
+
+        //! 2. String + String with Space
+        //todo:- We can add a space between two strings using " ".
+
+        let first = "Amol";
+        let last = "Pawar";
+
+        console.log(first + " " + last);
+        // Output: Amol Pawar
+
+
+        //! 3. Joining Multiple Strings
+        //todo:- We can join multiple strings using the + operator.
+
+        let str1 = "JavaScript";
+        let str2 = " is";
+        let str3 = " easy";
+        let str4 = " to learn";
+
+        console.log(str1 + str2 + str3 + str4);
+        // Output: JavaScript is easy to learn
+
+
+        //! 4. Concatenation with Variables
+        //todo:- We can concatenate variables containing string values.
+
+        let city = "Pune";
+        let country = "India";
+
+        let result = city + ", " + country;
+
+        console.log(result);
+        // Output: Pune, India
+
+
+        //! 5. Concatenation with String and Text
+        //todo:- We can combine a string variable with normal text.
+
+        let studentName = "Amol";
+
+        console.log("My name is " + studentName);
+        // Output: My name is Amol
+
+        console.log("Welcome " + studentName + "!");
+        // Output: Welcome Amol!
+
+
+        //! 6. Concatenation with Empty String
+        //todo:- An empty string contains no characters.
+        //todo:- Adding an empty string does not change the visible text.
+
+        let message = "Hello";
+
+        console.log(message + "");
+        // Output: Hello
+
+
+        //! 7. Concatenation with Repeated Strings
+        //todo:- We can join the same string multiple times.
+
+        let word = "Hello";
+
+        console.log(word + word);
+        // Output: HelloHello
+
+        console.log(word + " " + word + " " + word);
+        // Output: Hello Hello Hello
+
+
+        //! 8. Storing Concatenated Result
+        //todo:- We can store the concatenated result in another variable.
+
+        let a = "Java";
+        let b = "Script";
+
+        let language = a + b;
+
+        console.log(language);
+        // Output: JavaScript
+
+
+        //! 9. Using += for String Concatenation
+        //todo:- The += operator appends a string to an existing string.
+        //todo:- It updates the original variable.
+
+        let greeting = "Hello";
+
+        greeting += " Amol";
+
+        console.log(greeting);
+        // Output: Hello Amol
+
+        greeting += " Welcome";
+
+        console.log(greeting);
+        // Output: Hello Amol Welcome
+
+
+        //! 10. Concatenation with Function
+        //todo:- We can concatenate the value returned by a function.
+
+        function getName() {
+            return "Amol";
+        }
+
+        console.log("Hello " + getName());
+        // Output: Hello Amol
+
+
+        //! 11. Concatenation with typeof
+        //todo:- The typeof operator tells us the data type of the result.
+
+        let value1 = "Hello";
+        let value2 = "World";
+
+        let finalResult = value1 + value2;
+
+        console.log(finalResult);
+        // Output: HelloWorld
+
+        console.log(typeof finalResult);
+        // Output: string
+
+
+        //! 12. Original Strings Remain Unchanged
+        //todo:- Strings are immutable in JavaScript.
+        //todo:- Concatenation creates a new string.
+        //todo:- It does not modify the original strings.
+
+        let x = "Hello";
+        let y = "World";
+
+        let z = x + y;
+
+        console.log(x);
+        // Output: Hello
+
+        console.log(y);
+        // Output: World
+
+        console.log(z);
+        // Output: HelloWorld
+
+
+    </script>
+
+</body>
+
+</html>
