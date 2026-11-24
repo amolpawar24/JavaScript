@@ -1,0 +1,156 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Using Literals</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Array Using Literals</h1>
+
+    <script>
+
+        //! ARRAY USING LITERALS
+
+        // An array is a special object used to store multiple values in a single variable.
+        // We can create an array using square brackets [].
+        // Array elements are accessed using their index.
+        // Array indexing starts from 0.
+
+        let array = [10, 20, 30, 40, 50, 60, 70];
+
+        console.log(typeof array); // Returns object because arrays are objects in JavaScript.
+
+        console.log(array[0]); // 10
+        console.log(array[1]); // 20
+        console.log(array[2]); // 30
+        console.log(array[3]); // 40
+        console.log(array[4]); // 50
+        console.log(array[5]); // 60
+        console.log(array[6]); // 70
+        console.log(array[7]); // undefined because index 7 does not exist.
+
+
+        //! ARRAY WITH DIFFERENT DATA TYPES
+
+        // JavaScript arrays can store different types of values in a single array.
+        // We can store numbers, strings, booleans, null, objects, and other arrays.
+
+        let arr = [10, true, null, 'apple'];
+
+        console.log(arr);
+        console.log(arr.length); // Returns 4 because the array contains 4 elements.
+
+
+        //! ADDING ELEMENTS USING ARRAY INDEXES
+
+        // We can directly add a new element to an array by assigning a value to an index.
+        // If the assigned index already exists, its value will be replaced.
+        // If we assign a value beyond the current array length, JavaScript creates empty slots.
+        // Such an array is known as a Sparse Array.
+
+        arr[7] = "Amol";
+
+        console.log(arr);
+        console.log(arr.length); // 8
+
+        // Here, indexes 4, 5, and 6 are empty slots.
+        // The value "Amol" is stored at index 7.
+        // The array length becomes 8.
+
+
+        //! ACCESSING EMPTY ARRAY INDEXES
+
+        // When we access an index that does not exist, JavaScript returns undefined.
+        // undefined is a primitive data type in JavaScript.
+        // An empty slot is different from an actual element containing undefined.
+
+        console.log("arr[6] : ", arr[6]); // undefined
+        console.log("arr[7] : ", arr[7]); // Amol
+        console.log("arr[9] : ", arr[9]); // undefined
+
+        // We can also assign a value to an index that does not exist.
+
+        arr[9] = "Banana";
+
+        console.log("arr[9] : ", arr[9]); // Banana
+
+        console.log(arr);
+        console.log(arr.length); // 10
+
+        // Here, index 8 is an empty slot and index 9 contains "Banana".
+        // The array length becomes 10 because the highest index is 9.
+
+
+        //! DELETING ARRAY ELEMENTS USING THE DELETE KEYWORD
+
+        // The delete keyword is used to delete a property from an object.
+        // We can also use it to delete an element from an array.
+        // It removes the value at the specified index but does not change the array length.
+        // The deleted position becomes an empty slot.
+
+        let arrRef = [
+            10,
+            20,
+            30,
+            {
+                name: "Amol",
+                age: 24,
+                profession: "Software Developer"
+            },
+            50
+        ];
+
+        // Adding an object at index 8.
+        arrRef[8] = { name: "Mango" };
+
+        console.log("arrRef : ", arrRef);
+        console.log("Array Length : ", arrRef.length); // 9
+
+        // Deleting the value present at index 3.
+        delete arrRef[3];
+
+        console.log("arrRef[3] : ", arrRef[3]); // undefined
+        console.log("arrRef[6] : ", arrRef[6]); // undefined
+
+        console.log("Updated Array : ", arrRef);
+        console.log("Updated Length : ", arrRef.length); // 9
+
+        // The delete keyword removes the value at index 3.
+        // It does not remove the index position from the array length.
+        // The deleted position becomes an empty slot.
+        // The remaining array elements do not shift their positions.
+
+
+        //! DIFFERENCE BETWEEN EMPTY SLOTS AND UNDEFINED
+
+        // An empty slot and an explicitly assigned undefined value both return undefined
+        // when accessed, but they are different internally.
+
+        let emptyArray = [10, , 30];
+
+        let undefinedArray = [10, undefined, 30];
+
+        console.log(emptyArray[1]); // undefined
+        console.log(undefinedArray[1]); // undefined
+
+        // The in operator checks whether an index exists in an array.
+
+        console.log(1 in emptyArray); // false
+        console.log(1 in undefinedArray); // true
+
+        // In emptyArray, index 1 is an empty slot.
+        // In undefinedArray, index 1 exists and contains undefined.
+
+
+    </script>
+
+</body>
+
+</html>
+```
+
