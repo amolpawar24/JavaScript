@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenation with Boolean, Null and Undefined</title>
+</head>
+<body>
+
+    <h1>Concatenation with Boolean, Null and Undefined</h1>
+
+    <script>
+
+        //! 1. String + Boolean
+        //todo:- Boolean values are converted into strings during concatenation.
+
+        console.log("Hello " + true);
+        // Output: "Hello true"
+
+        console.log("Hello " + false);
+        // Output: "Hello false"
+
+
+        //! 2. Boolean + String
+
+        console.log(true + " JavaScript");
+        // Output: "true JavaScript"
+
+        console.log(false + " JavaScript");
+        // Output: "false JavaScript"
+
+
+        //! 3. String + Null
+        //todo:- null is converted into the string "null".
+
+        console.log("Value: " + null);
+        // Output: "Value: null"
+
+
+        //! 4. Null + String
+
+        console.log(null + " Value");
+        // Output: "null Value"
+
+
+        //! 5. String + Undefined
+        //todo:- undefined is converted into the string "undefined".
+
+        console.log("Value: " + undefined);
+        // Output: "Value: undefined"
+
+
+        //! 6. Undefined + String
+
+        console.log(undefined + " Value");
+        // Output: "undefined Value"
+
+
+        //! 7. Boolean + Number + String
+        //todo:- Evaluate the expression from left to right.
+
+        console.log(true + 10 + " JavaScript");
+        // Step 1: true + 10 = 11
+        // Step 2: 11 + " JavaScript" = "11 JavaScript"
+        // Output: "11 JavaScript"
+
+
+        //! 8. String + Boolean + Number
+
+        console.log("Result: " + true + 10);
+        // Step 1: "Result: " + true = "Result: true"
+        // Step 2: "Result: true" + 10 = "Result: true10"
+        // Output: "Result: true10"
+
+
+        //! 9. Null + Number + String
+
+        console.log(null + 10 + " Rupees");
+        // Step 1: null + 10 = 10
+        // Step 2: 10 + " Rupees" = "10 Rupees"
+        // Output: "10 Rupees"
+
+
+        //! 10. Undefined + Number + String
+
+        console.log(undefined + 10 + " Rupees");
+        // Step 1: undefined + 10 = NaN
+        // Step 2: NaN + " Rupees" = "NaN Rupees"
+        // Output: "NaN Rupees"
+
+
+        //! 11. Checking Data Types
+
+        console.log(typeof ("Hello " + true));
+        // Output: "string"
+
+        console.log(typeof ("Hello " + null));
+        // Output: "string"
+
+        console.log(typeof ("Hello " + undefined));
+        // Output: "string"
+
+
+        //! 12. Explicit String Conversion
+        //todo:- String() converts a value into a string explicitly.
+
+        console.log(String(true));
+        // Output: "true"
+
+        console.log(String(false));
+        // Output: "false"
+
+        console.log(String(null));
+        // Output: "null"
+
+        console.log(String(undefined));
+        // Output: "undefined"
+
+
+        //! 13. Using Variables
+
+        let isActive = true;
+        let userName = "Amol";
+        let userAge = null;
+        let userCity;
+
+        console.log("Active: " + isActive);
+        // Output: "Active: true"
+
+        console.log("Name: " + userName);
+        // Output: "Name: Amol"
+
+        console.log("Age: " + userAge);
+        // Output: "Age: null"
+
+        console.log("City: " + userCity);
+        // Output: "City: undefined"
+
+    </script>
+
+</body>
+</html>
